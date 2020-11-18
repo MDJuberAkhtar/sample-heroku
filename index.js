@@ -27,7 +27,7 @@ checkBody = (req, res, next) => {
 const students = JSON.parse(fs.readFileSync('./data.json', 'utf-8'));
 
 //get all students
-app.get('/studentsdata', (req, res)=>{
+app.get('/', (req, res)=>{
     res.status(200).json({
         status:'sccuess',
         length: students.length,
